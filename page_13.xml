@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<main>
+  <PageData>
+      <MainHeading><![CDATA[<b>7.13. Networking</b>]]></MainHeading>
+    <SubHeading><![CDATA[]]></SubHeading>
+      
+    <PageText>
+      <pText><![CDATA[Python supports network services for client-server model. Socket support in the operating system allows implementing clients and servers for both connection-oriented and connectionless protocols. Python has libraries that provide higher-level access to specific application level network protocols]]></pText>
+    </PageText>
+    
+    <PageText>
+      <pText><![CDATA[To create a socket, we must import the socket module. The socket.socket() function available in the socket module, helps to create a socket. It has the following syntax.]]></pText>
+    </PageText>
+     
+    <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>s = socket.socket(socket_family,socket_type,protocol = 0)</div>
+    </div>
+]]></pText>
+    </PageText>
+     
+    <PageText>
+      <pText><![CDATA[socket_family – The family of protocols that is used as the transport mechanism. These values are constants such as AF_INET, PF_INET, PF_UNIX, PF_X25, and so on.]]></pText>
+    </PageText>
+    
+    <PageText>
+      <pText><![CDATA[socket_type- The type of communications between the two endpoints. The values are SOCK_STREAM for connection-oriented protocols and SOCK_DGRAM for connectionless protocols.]]></pText>
+    </PageText>
+ 
+    <PageText>
+        <pText><![CDATA[<b>Example</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>import socket</div>
+    <div>s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)</div>
+    </div>
+]]></pText>
+    </PageText>
+    
+    <PageText>
+        <pText><![CDATA[Here we made a socket instance and passed it two parameters. The first parameter is
+AF_INET and the second one is SOCK_STREAM. AF_INET refers to the address family ipv4. Secondly the SOCK_STREAM means connection oriented TCP protocol. Now we could connect to a server using this socket.
+]]></pText>
+    </PageText>
+   
+    <PageText>
+        <pText><![CDATA[<b><i>Making a Server</i></b>]]></pText>
+    </PageText>
+   
+    <PageText>
+        <pText><![CDATA[A server has a bind() method which binds it to a specific IP and port so that it can listen to incoming requests on that IP and port. Next a server has a listen() method which puts the server into listen mode. This allows the server to listen to incoming connections. And lastly a server has an accept() and close() method. The accept method initiates a connection with the client and the close method closes the connection with the client. Now let’s begin making our simple server.]]></pText>
+    </PageText>
+    
+    <PageText>
+        <pText><![CDATA[<b>Example Program</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div># first of all import the socket library</div>
+    <div>import socket</div>
+    <div># next create a socket object</div>
+    <div>s = socket.socket()</div>
+    <div>print(“Socket successfully created”)</div>
+    <div># reserve a port on your computer in our</div>
+    <div># case it is 12345 but it can be anything </div>
+    <div>port = 12345</div>
+    <div># Next bind to the port</div>
+    <div># we have not typed any ip in the ip field</div>
+    <div># instead we have inputted an empty string</div>
+    <div># this makes the server listen to requests</div>
+    <div># coming from other computers on the network</div>
+    <div>s.bind((‘’, port))</div>
+    <div>print(“socket binded to %s” %(port))</div>
+    <div># put the socket into listening mode</div>
+    <div>s.listen(5)</div>
+    <div>print(“socket is listening”)</div>
+    <div># a forever loop until we interrupt it or</div>
+    <div># an error occurs</div>
+    <div>while True:</div>
+    <div># Establish connection with client.</div>
+    <div>c, addr = s.accept()</div>
+    <div>print(‘Got connection from’, addr)</div>
+    <div># send a thank you message to the client.</div>
+    <div>c.send(‘Thank you for connecting’)</div>
+    <div># Close the connection with the client</div>
+    <div>c.close()</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Output</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[
+        <div class = "TextBorderClass">
+        <div>Socket successfully created</div>
+        <div>socket binded to 12345</div>
+        <div>socket is listening</div>
+        </div>
+]]></pText>
+    </PageText>
+  
+    <PageText>
+        <pText><![CDATA[First of all we import socket which is necessary. Then we made a socket object and
+reserved a port on our personal computer. After that we binded our server to the specified port. Passing an empty string means that the server can listen to incoming connections from other computers as well. If we would have passed 127.0.0.1 then it would have listened to only those calls made within the local computer. After that we put the server into listen mode with parameter 5. It means that 5 connections are kept waiting if the server is busy and if a 6th socket tries to connect then the connection is refused. Lastly we make a while loop and start to accept all incoming connections and close those connections after a thank you message to all connected sockets. Now we have to program a client.
+]]></pText>
+    </PageText>
+    
+    <PageText>
+        <pText><![CDATA[<b>Making a Client</b>]]></pText>
+    </PageText>
+    
+    <PageText>
+        <pText><![CDATA[Let us write a very simple client program which opens a connection to a given port 12345 and a given host. It is very simple to create a socket client using the Python’s socket module function. The socket.connect(hosname,port) opens a TCP connection to hostname on the port. Once we have a socket open, you can read from it like any IO object. When done, remember to close it, as we would close a file. Type these commands in the terminal.
+]]></pText>
+    </PageText>
+    
+    <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div># start the server</div>
+    <div>$ python server.py</div>
+    <div># keep the above terminal open</div>
+    <div># now open another terminal and type:</div>
+    <div>$ telnet localhost 12345</div>
+    </div>
+]]></pText>
+    </PageText>
+   
+    <PageText>
+        <pText><![CDATA[After typing these commands we will get the following output in our terminal.]]></pText>
+    </PageText>
+    
+    <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div># in the server.py terminal you will see </div>
+    <div># this output:</div>
+    <div>Socket successfully created </div>
+    <div>socket binded to 12345</div>
+    <div>socket is listening</div>
+    <div>Got connection from (‘127.0.0.1’, 52617)</div>
+    <div># In the telnet terminal you will get this:</div>
+    <div>Trying ::1...</div>
+    <div>Trying 127.0.0.1...</div>
+    <div>Connected to localhost.</div>
+    <div>Escape character is ‘^]’.</div>
+    <div>Thank you for connectingConnection closed by foreign host.</div>
+    </div>
+]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[This output shows that our server is working. Now let’s make our client.]]></pText>
+    </PageText>
+   
+    <PageText>
+        <pText><![CDATA[<b>Example Program</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div># Import socket module</div>
+    <div>import socket</div>
+    <div># Create a socket object</div>
+    <div>s = socket.socket()</div>
+    <div># Define the port on which you want to connect</div>
+    <div>port = 12345</div>
+    <div># connect to the server on local computer</div>
+    <div>s.connect((‘127.0.0.1’, port))</div>
+    <div># receive data from the server</div>
+    <div>print(s.recv(1024))</div>
+    <div># close the connection</div>
+    <div>s.close()</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Output</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[
+        <div class = "TextBorderClass">
+        <div># start the server:</div>
+        <div>$ python server.py</div>
+        <div>Socket</div>
+        <div>successfull</div>
+        <div>y created</div>
+        <div>socket</div>
+        <div>binded to</div>
+        <div>12345</div>
+        <div>socket is</div>
+        <div>listening</div>
+        <div>Got connection from (‘127.0.0.1’, 52617)</div>
+        <div>$ python client.py</div>
+        <div>Thank you for connecting</div>
+        </div>
+]]></pText>
+    </PageText>
+      
+  </PageData>
+</main>

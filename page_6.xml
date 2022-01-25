@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<main>
+  <PageData>
+      <MainHeading><![CDATA[<b>Loops</b>]]></MainHeading>
+    <SubHeading><![CDATA[]]></SubHeading>
+      
+    <PageText>
+      <pText><![CDATA[Python provides various control structures that allow for repeated execution. A loop statement allows us to execute a statement or group of statements multiple times.]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>for loop</b>]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>The for loop in Python is used to iterate over a sequence (list, tuple, string) or other objects that can be iterated.</b>]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Syntax</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>for item in sequence: </div>
+    <div>Body of for</div>
+    </div>
+]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[Here, item is the variable that takes the value of the item inside the sequence of each iteration. The sequence can be list, tuple, string, set etc. Loop continues until we reach the last item in the sequence. The body of for loop is separated from the rest of the code using indentation.]]></pText>
+    </PageText>
+      
+      <PageText>
+        <pText><![CDATA[<b>Example Program 1</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>#Program to find the sum of all numbers stored in a list </div>
+    <div># List of numbers</div>
+    <div>numbers = [2,4,6,8,10]</div>
+    <div># variable to store the sum </div>
+    <div>sum = 0</div>
+    <div># iterate over the list </div>
+    <div>for item in numbers:</div>
+    <div>sum = sum+item </div>
+    <div># print the sum</div>
+    <div>print(“The sum is”,sum)</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Output 1</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[
+        <div class = "TextBorderClass">
+        <div>The sum is 30</div>
+        </div>
+]]></pText>
+    </PageText> 
+     
+    <PageText>
+        <pText><![CDATA[<b>Example Program 2</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>flowers = [‘rose’, ‘lotus’,	‘jasmine’] </div>
+    <div>for flower in flowers:</div>
+    <div>print(‘Current flower:’, flower)</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Output 2</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[
+        <div class = "TextBorderClass">
+        <div>Current flower: rose</div>
+        <div>Current flower: lotus</div>
+        <div>Current flower: jasmine</div>
+        </div>
+]]></pText>
+    </PageText> 
+     
+    <PageText>
+        <pText><![CDATA[<b>for loop with else statement</b>]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Python supports to have an else statement associated with a loop statement. If the else statement is used with a <b>for</b> loop, the else statement is executed when the loop has finished iterating the list. A break statement can be used to stop a <i>for</i> loop. In this case, the else part is ignored. Hence, a<i> for</i> loop’s else part runs if no break occurs. Break statement will be discussed in the next section</b>]]></pText>
+    </PageText>
+     
+     <PageText>
+        <pText><![CDATA[<b>Example Program</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>#Program to find whether an item is present in the list</div>
+    <div>list=[10,12,13,34,27,98]</div>
+    <div>num = int(input(“Enter the number to be searched in the list: “))</div>
+    <div>for item in range(len(list)):</div>
+    <div>if list[item] == num:</div>
+    <div>print(“Item found at: “,(item+1))</div>
+    <div>break</div>
+    <div>else:</div>
+    <div>print(“Item not found in the list”)</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Output</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[
+        <div class = "TextBorderClass">
+        <div>Enter the number to be searched in the list:34 </div>
+        <div>Item found at:4</div>
+        </div>
+]]></pText>
+    </PageText> 
+      
+    <PageText>
+        <pText><![CDATA[<b>while loop</b>]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[The while loop in Python is used to iterate over a block of code as long as the test expression (condition) is true. We generally use this loop when we don’t know the number of times to iterate in advance]]></pText>
+    </PageText>
+   
+      <PageText>
+        <pText><![CDATA[<b>Syntax</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>while test_expression: </div>
+    <div>Body of while</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+      <PageText>
+        <pText><![CDATA[In while loop, test_ expression is checked first. The body of the loop is entered only if the test_expression evaluates to True. After one iteration, the test expression is checked again. This process is continued until the test_expression evaluates to False. In Python, the body of the while loop is determined through indentation. Body starts with indentation and the first unindented line shows the end. When the condition is tested and the result is false, the loop body will be skipped and the first statement after the while loop will be executed.]]></pText>
+    </PageText>
+      
+      <PageText>
+        <pText><![CDATA[<b>Example Program</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div># Program to find the sum of first N natural numbers </div>
+    <div>n =int(input(“Enter the limit: “))</div>
+    <div>sum=0 </div>
+    <div>i=1</div>
+    <div>while i<=n:</div>
+    <div>sum=sum+i</div>
+    <div>i=i+1</div>
+    <div>print(“Sum of first”, n, “natural numbers is “, sum)</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Output</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[
+        <div class = "TextBorderClass">
+        <div>Enter the limit: 5</div>
+        <div>Sum of first 5 natural numbers is 15</div>
+        </div>
+]]></pText>
+    </PageText> 
+    
+     <PageText>
+        <pText><![CDATA[<b>while loop with else statement</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[<b>If the else statement is used with a while loop, the else statement is executed when the condition becomes false. while loop can be terminated with a break statement. In such case, the else part is ignored. Hence, a while loop’s else part runs if no break occurs and the condition is false</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+        <pText><![CDATA[<b>Example Program</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div># Demo of While with else</div>
+    <div>count=1</div>
+    <div>while count<=3:</div>
+    <div>print(“Python Programming”)</div>
+    <div>count=count+1</div>
+    <div>else:</div>
+    <div>print(“Exit”) </div>
+    <div>print(“End of Program”)</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Output</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[
+        <div class = "TextBorderClass">
+        <div>Python Programming</div>
+        <div>Python Programming</div>
+        <div>Python Programming</div>
+        <div>Exit</div>
+        <div>End of Program</div>
+        </div>
+]]></pText>
+    </PageText> 
+      
+  </PageData>
+</main>

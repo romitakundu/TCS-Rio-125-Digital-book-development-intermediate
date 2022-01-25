@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<main>
+  <PageData>
+      <MainHeading><![CDATA[<b>7.9. Modules</b>]]></MainHeading>
+    <SubHeading><![CDATA[]]></SubHeading>
+      
+    <PageText>
+      <pText><![CDATA[Modules refer to a file containing Python statements and definitions. We use modules to break down large programs into small manageable and organized files. Further, modules provide reusability of code. A module can define functions, classes and variables. A module can also include runnable code. Python has a lot of standard modules (built-in modules) available.]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Creating Modules</b>]]></pText>
+    </PageText>
+     
+     <PageText>
+        <pText><![CDATA[We can define our most used functions in a module and import it, instead of copying their definitions into different programs. A file containing Python code, for e.g.: prime.py, is called a module and its module name would be prime. Let us create a module for finding the sum of two numbers. The following code creates a module in Python. Type the code and save it as test.py]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Example</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div># Python Module example</div>
+    <div>“””This program adds two</div>
+    <div>numbers and return the result””” </div>
+    <div>def sum(a, b):</div>
+    <div>result = a + b</div>
+    <div>return result</div>
+    </div>
+]]></pText>
+    </PageText>
+   
+      <PageText>
+        <pText><![CDATA[Here we have a function sum() inside a module named test. The function takes in two numbers and returns their sum.]]></pText>
+    </PageText>
+    
+      <PageText>
+          <pText><![CDATA[<b><i>import</i> Statement</b>]]></pText>
+    </PageText>
+      
+    <PageText>
+          <pText><![CDATA[We can use any Python source file as a module by executing an import statement in some other Python source file. User-defined modules can be imported the same way as we import built-in modules.]]></pText>
+    </PageText>
+         
+      <PageText>
+          <pText><![CDATA[We use the import keyword to do this. The import has the following syntax.]]></pText>
+    </PageText>
+   
+    <PageText>
+          <pText><![CDATA[import module1[, module2[,... moduleN]]]></pText>
+    </PageText>
+      
+    <PageText>
+          <pText><![CDATA[When the interpreter encounters an import statement, it imports the module if the module is present in the search path. A search path is a list of directories that the interpretersearches before importing a module. For example, to import the module test.py, you need to put the following command at the top of the script.
+]]]></pText>
+    </PageText>
+    
+    <PageText>
+        <pText><![CDATA[<b>Example</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>import test</div>
+    <div>print(test.sum(2,3))</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Output</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[
+        <div class = "TextBorderClass">
+        <div>5</div>
+        </div>
+]]></pText>
+    </PageText>
+    
+     <PageText>
+        <pText><![CDATA[A module is loaded only once, regardless of the number of times it is imported. This prevents the module execution from happening over and over again if multiple imports occur.]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[<b>import with renaming</b>]]></pText>
+    </PageText>
+    
+    <PageText>
+        <pText><![CDATA[We can import built-in or user-defined modules with an alias name. The following code shows how the built-in module math can be imported using an alias name.]]></pText>
+    </PageText>
+    
+    <PageText>
+        <pText><![CDATA[<b>Example Program</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>import math as m</div>
+    <div>print(“The value of pi is”, m.pi)</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Output</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[
+        <div class = "TextBorderClass">
+        <div>The value of pi is 3.141592653589793</div>
+        </div>
+]]></pText>
+    </PageText>
+    
+     <PageText>
+        <pText><![CDATA[We have renamed the math module as m. This can save typing time in some cases. It is important to note that the name math is not recognized in our scope. Hence, math.pi is invalid, m.pi is the correct implementation.]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[<b>from…import statement</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[We can import specific names form a module without importing the module as a whole. The module math contains a lot of built-in functions. But if we want to import only the pi function, the from…import statement can be used. The following example illustrates importing pi from math module.]]></pText>
+    </PageText>
+      
+     <PageText>
+        <pText><![CDATA[<b>Example Program</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>from math import pi</div>
+    <div>print(“The value of pi is :”, pi)</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Output</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[
+        <div class = "TextBorderClass">
+        <div>The value of pi is : 3.14159265359</div>
+        </div>
+]]></pText>
+    </PageText>
+    
+    <PageText>
+        <pText><![CDATA[We have imported only the pi function from the math module. Hence no need to use the dot operator. We can also import multiple attributes from the module using from…import statement. The following example illustrates the import of pi as well as sqrt() from the math module using from…import statement.]]></pText>
+    </PageText>
+      
+     <PageText>
+        <pText><![CDATA[<b>Example Program</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>from math import pi,sqrt </div>
+    <div>print(“The value of pi is :”, pi)</div>
+    <div>print(“The square root of 4 is:”,sqrt(4))</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Output</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[
+        <div class = "TextBorderClass">
+        <div>The value of pi is: 3.14159265359</div>
+        <div>The square root of 4 is: 2.0</div>
+        </div>
+]]></pText>
+    </PageText>
+      
+     <PageText>
+        <pText><![CDATA[<b>import all names</b>]]></pText>
+    </PageText>
+   
+    <PageText>
+        <pText><![CDATA[We can import all names (definitions) from a module using the following construct. The following example shows how all the definitions from the math module can be imported. This makes all names except those beginning with an underscore, visible in our scope.]]></pText>
+    </PageText>
+    
+    <PageText>
+        <pText><![CDATA[<b>Example Program</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>from math import *</div>
+    <div>print(“The value of pi is :”, pi )</div>
+    <div>print(“The square root of 4 is:”,sqrt(4))</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Output</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[
+        <div class = "TextBorderClass">
+        <div>The value of pi is: 3.14159265359 </div>
+        <div>The square root of 4 is: 2.0</div>
+        </div>
+]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[Here all functions in the module math are imported. But we have used only pi and sqrt. Importing everything with the asterisk (*) symbol is not a good programming practice. This can lead to duplicate definitions for an identifier]]></pText>
+    </PageText>
+      
+  </PageData>
+</main>

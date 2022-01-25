@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<main>
+  <PageData>
+      <MainHeading><![CDATA[<b>7.11. File Handling</b>]]></MainHeading>
+    <SubHeading><![CDATA[]]></SubHeading>
+      
+    <PageText>
+      <pText><![CDATA[File is a named location on disk to store related information. When we want to read from or write to a file we need to open it first. When we are done, it needs to be closed, so that resources that are tied with the file are freed. Hence, in Python, a file operation takes place in the following order]]></pText>
+    </PageText>
+      
+      <PageText>
+      <pText><![CDATA[
+    <ol class = "LowerAlphaClass">
+    <li>Open a file</li>
+    <li>Read or write (perform operation)</li>
+    <li>Close the file</li>
+    </ol>
+]]></pText>
+    </PageText>
+    
+    <PageText>
+        <pText><![CDATA[Before we can read or write a file, we have to open it using Python’s built-in open() function. This function returns a file object, also called a handle, as it is used to read or modify the file accordingly.]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[We can specify the mode while opening a file. In mode, we specify whether we want to read ‘r’, write ‘w’ or append ‘a’ to the file. We also specify if we want to open the file in text mode or binary mode.]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[The following shows the syntax for opening a file.]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[<b>Syntax</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>file object = open(filename,accessmode)</div>
+    </div>
+]]></pText>
+    </PageText>
+  
+    <PageText>
+        <pText><![CDATA[filename: The filename argument is a string value that contains the name of the file that we want to access.]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[accessmode: The accessmode determines the mode in which the file has to be opened, i.e., read, write, append, etc. A complete list of possible values is given below. This is optional parameter and the default file access mode is read (r).]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Modes for Opening a File</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+      <pText><![CDATA[
+    <ol class = "DecimalNumberClass">
+    <li>‘r’ - Opens a file for reading only. The file pointer is placed at the beginning of the file. This is the default mode.</li>
+    <li>‘r+’- Opens a file for both reading and writing. The file pointer placed at the beginning of the file.</li>
+    <li>‘w’- Opens a file for writing only. Overwrites the file if the file exists. If the file does not exist, creates a new file for writing.</li>
+    <li>‘w+’ - Opens a file for both writing and reading. Overwrites the existing file if the file exists. If the file does not exist, creates a new file for reading and writing.</li>
+    <li>‘wb+’ - Opens a file for both writing and reading in binary format. Overwrites the existing file if the file exists. If the file does not exist, creates a new file for reading and writing.</li>
+    <li>‘a’ - Opens a file for appending. The file pointer is at the end of the file if the file exists. That is, the file is in the append mode. If the file does not exist, it creates a new file for writing.</li>
+    <li>‘a+’ - Opens a file for both appending and reading. The file pointer is at the end of the file if the file exists. The file opens in the append mode. If the file does not exist, it creates a new file for reading and writing.</li>
+    </ol>
+]]></pText>
+    </PageText>
+    
+      <PageText>
+        <pText><![CDATA[<b>Reading from a File</b>]]></pText>
+    </PageText>
+   
+      <PageText>
+        <pText><![CDATA[To read the content of a file, we must open the file in reading mode. The read() method reads a string from an open file. It is important to note that Python strings can have binary data, apart from text data. The following gives the syntax for reading from a file.]]></pText>
+    </PageText>
+   
+    <PageText>
+        <pText><![CDATA[<b>Example Program</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div># Open a file in read mode </div>
+    <div>fo = open(“test.txt”, “r”)</div>
+    <div>str = fo.read(11)	#Reads first 11 characters from the file</div>
+    <div>print(“String Read is : “, str)</div>  
+    <div># Close opened file</div>
+    <div>fo.close()</div>
+    </div>
+]]></pText>
+    </PageText>
+     
+    <PageText>
+      <pText><![CDATA[
+    <ol class = "DecimalNumberClass">
+    <li>file.read() – Here, the passed parameter size is the number of bytes to be read from the opened file. This method starts reading from the beginning of the file and if size is missing, then it tries to read as much as possible, maybe until the end of file.</li>
+    <li>file.readline()-The method readline()reads one entire line from the file. A trailing newline character is kept in the string. An empty string is returned only when EOF is encountered immediately.</li>
+    <li>file.readlines([sizeint]) - The method readlines() reads until EOF and returns a list containing the lines. sizeint is an optional argument and if it is present, instead of reading up to EOF, whole lines approximate to sizeint bytes are read. An empty string is returned only when EOF is encountered immediately.</li>
+    </ol>
+]]></pText>
+    </PageText>
+   
+    <PageText>
+        <pText><![CDATA[<b>Writing to a File</b>]]></pText>
+    </PageText>
+    
+    <PageText>
+        <pText><![CDATA[In order to write into a file we need to open it in write ‘w’, append ‘a’ or exclusive creation ‘x’ mode. We need to be careful with the ‘w’ mode as it will overwrite into the file if it already exists. All previous data will be erased.]]></pText>
+    </PageText>
+   
+    <PageText>
+        <pText><![CDATA[Writing a string or sequence of bytes (for binary files) is done using write() method. This method returns the number of characters written to the file. The write() method does not add a newline character (‘\n’) to the end of the string. The following shows the syntax of write() method.
+]]></pText>
+    </PageText>
+    
+    <PageText>
+        <pText><![CDATA[<b>Syntax</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>fileObject.write(string);</div>
+    </div>
+]]></pText>
+    </PageText>
+    
+    <PageText>
+        <pText><![CDATA[Here, passed parameter string is the content to be written into the opened file.]]></pText>
+    </PageText>
+    
+    <PageText>
+        <pText><![CDATA[<b>Example Program</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div># Open a file in writing mode</div>
+    <div>fo = open(“test.txt”, “w”)</div>
+    <div>fo.write(“Programming with Python is Fun.\nLet’s try Python!\n”);</div>
+    <div># Close opened file</div>  
+    <div>fo.close()</div>
+    <div>print(“File”, fo.name, “closed.”)</div>
+    </div>
+]]></pText>
+    </PageText>
+   
+    <PageText>
+        <pText><![CDATA[<b><i>with</i> Statement to Open a File</b>]]></pText>
+    </PageText>
+    
+    <PageText>
+        <pText><![CDATA[Python’s <i>with</i> statement is handy when we have two related operations which we would like to execute as a pair, with a block of code in between. The classic example is opening a file, manipulating the file, then closing it]]></pText>
+    </PageText>
+      
+       <PageText>
+        <pText><![CDATA[<b>Example Program</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>with open(‘output.txt’, ‘w’) as f:</div>
+    <div>f.write(‘Hello Python!’)</div>
+    </div>
+]]></pText>
+    </PageText>
+    
+    <PageText>
+        <pText><![CDATA[The above with statement will automatically close the file after the nested block of code. The advantage of using a with statement is that it is guaranteed to close the file no matter how the nested block exits. If an exception occurs before the end of the block, it will close the file before the exception is caught by an outer exception handler.]]></pText>
+    </PageText>
+  
+    <PageText>
+        <pText><![CDATA[<b>CSV Files</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[Python has a Comma Separated Values (CSV) module for supporting CSV files. Following example illustrates how to write to a CSV file.]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[<b>Example Program</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>import csv </div>
+    <div>data=[“1,2,3,4,5,6,7,8,9”.split(“,”)]</div>
+    <div>file=”output.csv”</div>
+    <div>with open(file,”w”)as csv_file:</div>
+    <div>writer=csv.writer(csv_file,delimiter=”,”)</div>
+    <div>for line in data:</div>
+    <div>writer.writerow(line)</div>
+    <div>csv_file.close()</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Output</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[
+        <div class = "TextBorderClass">
+        <div>A CSV file named “output.csv” with contents 1,2,3,4,5,6,7,8,9 is created. </div>
+        <div>Below example shows how to read from a CSV file.</div>
+        </div>
+]]></pText>
+    </PageText>
+   
+    <PageText>
+        <pText><![CDATA[<b>Example Program</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>import csv </div>
+    <div>file=”output.csv”]</div>
+    <div>with open(file,”r”)as csv_file: </div>
+    <div>reader=csv.reader(csv_file)</div>
+    <div>for row in reader:</div>
+    <div>print(“ “.join(row))</div>
+    <div>csv_file.close()</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Output</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[
+        <div class = "TextBorderClass">
+        <div>1 2 3 4 5 6 7 8 9</div>
+        </div>
+]]></pText>
+    </PageText>
+      
+  </PageData>
+</main>

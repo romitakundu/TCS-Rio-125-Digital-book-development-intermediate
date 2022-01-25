@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<main>
+  <PageData>
+      <MainHeading><![CDATA[<b>7.12. Reading Images</b>]]></MainHeading>
+    <SubHeading><![CDATA[]]></SubHeading>
+      
+    <PageText>
+      <pText><![CDATA[Python is a general-purpose interpreted, interactive, object-oriented, and high-level programming language. Python source code is available under the GNU General Public License (GPL) and it is now maintained by a core development team at the National Research Institute. Python is a versatile language which is easy to script and easy to read. It doesn’t have strict rules for syntax. Python is open source and it forms a strong backbone to build large applications. We can run Python from a Graphical User Interface (GUI) environment if we have a GUI application on our system that supports Python. IDLE is the Integrated Development Environment (IDE) for Python. Its installation comes with integrated development environment for programming. Other examples for Python IDE are Spyder, PyCharm etc. All the programs in this book follow Python 3.4.3 for Windows.]]></pText>
+    </PageText>
+      
+    <PageText>
+      <pText><![CDATA[Python supports Pillow library for image related operations. For this we need to install PIL through PIP. Python Image library is used to work with image files.]]></pText>
+    </PageText>
+    
+     <PageText>
+      <pText><![CDATA[from PIL import Image]]></pText>
+    </PageText>
+     
+    <PageText>
+      <pText><![CDATA[
+    <ol class = "ListClassDisc">
+    <li>Open an image file</li>
+    <div>image=Image.open(image_name)</div>
+    <li>Display the image</li>
+    <div>image.show()</div>
+    <li>resize(): Resizes the image to a specified size</li>
+    <div>image.resize(255,255)</div>
+    <li>rotate(): Rotates the image to the specified degrees counter clockwise.</li>
+    <div>image.rotate(90)</div>
+    <li>format – Gives the format of the image.</li>
+    <li>size- Gives a tuple with 2 values as width and height of the image in pixels.</li>
+    <li>mode-Gives the band of the image, “L” for grey scale, “RGB” for true color image.</li>
+    <li>print(image.format,image.size, image.mode)</li>
+    <li>•	Converting image to different mode – Any image can be converted from one mode to “L” or “RGB” mode. Conversion between modes other than “L” and “RGB” needs conversion into any of these 2 intermediate modes.</li>
+    <div>conv_image=image.convert(“L”)</div>
+    </ol>
+]]></pText>
+    </PageText>
+    
+    <PageText>
+        <pText><![CDATA[<b>Following program converts a sample image into grey scale. </b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>from PIL import Image </div>
+    <div>im=Image.open(“C:/Python34/Lib/Jeeva.jpg”)</div>
+    <div>im.show()</div>
+    <div>grey_image=im.convert(“L”)</div>
+    <div>grey_image.show()</div>
+    <div>grey_image.save(“Greyscale.jpg”)</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+  </PageData>
+</main>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<main>
+  <PageData>
+      <MainHeading><![CDATA[<b>Control Statements</b>]]></MainHeading>
+    <SubHeading><![CDATA[]]></SubHeading>
+      
+    <PageText>
+      <pText><![CDATA[Control statements change the execution from normal sequence. Loops iterate over a block of code until test expression is false, but sometimes we wish to terminate the current iteration or even the whole loop without checking test expression. The break and continue statements are used in these cases. Python supports the following three control statements.]]></pText>
+    </PageText>
+      
+    <PageText>
+      <pText><![
+          <ol class="DecimalNumberClass">
+            <li>break</li>
+            <li>continue</li>
+            <li>pass</li>
+          </ol> 
+          ]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[<b><i>break </i>statement</b>]]></pText>
+    </PageText>
+      
+    <PageText>
+      <pText><![CDATA[The break statement terminates the loop containing it. Control of the program flows to the statement immediately after the body of the loop. If it is inside a nested loop (loop inside another loop), break will terminate the innermost loop. It can be used with both for and while loops.]]></pText>
+    </PageText>
+     
+      <PageText>
+        <pText><![CDATA[<b>Example Program</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>#Demo of break statement in Python</div>
+    <div>for i in range(2,10,2):</div>
+    <div>if i==6: break </div>
+    <div>print(i)</div>
+    <div>print(“End of Program”)</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Output</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[
+        <div class = "TextBorderClass">
+        <div>2</div>
+        <div>4</div>
+        <div>End of Program</div>
+        </div>
+]]></pText>
+    </PageText> 
+    
+    <PageText>
+        <pText><![CDATA[The continue statement is used to skip the rest of the code inside a loop for the current iteration only. Loop does not terminate but continues on with the next iteration. Continue returns the control to the beginning of the loop. The continue statement rejects all the remaining statements in the current iteration of the loop and moves the control back to the top of the loop. The <b>continue </b>statement can be used in both while and for loops.]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[<b>Example Program</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div># Demo of continue in Python </div>
+    <div>for letter in ‘abcd’:</div>
+    <div>if letter ==’c’: continue;</div>
+    <div>print(letter)</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Output</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[
+        <div class = "TextBorderClass">
+        <div>a</div>
+        <div>b</div>
+        <div>d</div>
+        </div>
+]]></pText>
+    </PageText> 
+   
+    <PageText>
+        <pText><![CDATA[<b><i>pass</i> statement</b>]]></pText>
+    </PageText>
+   
+    <PageText>
+        <pText><![CDATA[In Python programming, pass is a null statement. The difference between a comment and pass statement in Python is that, while the interpreter ignores a comment entirely, pass is not ignored. But nothing happens when it is executed. It results in no operation.]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[It is used as a placeholder. Suppose we have a loop or a function that is not implemented yet, but we want to implement it in the future. The function or loop cannot have an empty body. The interpreter will not allow this. So, we use the pass statement to construct a body that does nothing.]]></pText>
+    </PageText>
+     
+     <PageText>
+        <pText><![CDATA[<b>Example</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>for val in sequence:</div>
+    <div>pass</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+      
+  </PageData>
+</main>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<main>
+  <tableofcontent>Contents</tableofcontent>
+  <MainBookName>Internet of Things</MainBookName>
+  <Topics>
+    <Content id="1" HeaderContant="Chapter 7. Introduction to Python Programming"><![CDATA[7.1	Introduction]]></Content>
+    <Path><![CDATA[page_1.xml]]></Path>
+  </Topics>
+  <Topics>
+    <Content HeaderContant=""><![CDATA[7.2	Input-Output Statements]]></Content>
+    <Path><![CDATA[page_2.xml]]></Path>
+  </Topics>
+  <Topics>
+    <Content HeaderContant=""><![CDATA[7.3. Operators]]></Content>
+    <Path><![CDATA[page_3.xml]]></Path>
+  </Topics>
+  <Topics>
+    <Content HeaderContant=""><![CDATA[7.4 Data Types]]></Content>
+    <Path><![CDATA[page_4.xml]]></Path>
+  </Topics>
+  <Topics>
+    <Content HeaderContant=""><![CDATA[7.5. Decision Making]]></Content>
+    <Path><![CDATA[page_5.xml]]></Path>
+  </Topics>
+  <Topics>
+    <Content HeaderContant=""><![CDATA[7.6. Loops]]></Content>
+    <Path><![CDATA[page_6.xml]]></Path>
+  </Topics>
+  <Topics>
+    <Content HeaderContant=""><![CDATA[7.7. Control Statements]]></Content>
+    <Path><![CDATA[page_7.xml]]></Path>
+  </Topics>
+  <Topics>
+    <Content HeaderContant=""><![CDATA[7.8. Functions]]></Content>
+    <Path><![CDATA[page_8.xml]]></Path>
+  </Topics>
+  <Topics>
+    <Content HeaderContant=""><![CDATA[7.9. Modules	]]></Content>
+    <Path><![CDATA[page_9.xml]]></Path>
+  </Topics>
+  <Topics>
+    <Content HeaderContant=""><![CDATA[7.10. Exception Handling]]></Content>
+    <Path><![CDATA[page_10.xml]]></Path>
+  </Topics>
+  <Topics>
+    <Content HeaderContant=""><![CDATA[7.11. File Handling]]></Content>
+    <Path><![CDATA[page_11.xml]]></Path>
+  </Topics>
+  <Topics>
+    <Content HeaderContant=""><![CDATA[7.12. Reading Images]]></Content>
+    <Path><![CDATA[page_12.xml]]></Path>
+  </Topics>
+  <Topics>
+    <Content HeaderContant=""><![CDATA[7.13. Networking]]></Content>
+    <Path><![CDATA[page_13.xml]]></Path>
+  </Topics>
+ <Topics>
+    <Content HeaderContant=""><![CDATA[7.14.Conclusion]]></Content>
+    <Path><![CDATA[page_13.xml]]></Path>
+  </Topics> 

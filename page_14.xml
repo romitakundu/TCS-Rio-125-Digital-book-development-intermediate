@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<main>
+  <PageData>
+      <MainHeading><![CDATA[<b>7.14. Conclusion</b>]]></MainHeading>
+    <SubHeading><![CDATA[]]></SubHeading>
+      
+    <PageText>
+      <pText><![CDATA[This Chapter explains about Python programming. Various components of Python like input- output statements, operators are explained. Data types of Python namely numbers, string, list, tuple, set and dictionary are explained with example programs. Decision making statements, for loop, for loop with else statement, while loop, while loop with else statement and control statements are explained with illustrations. Function definition, function calling, global and local variables, functions returning more than one value are explained with example programs. Modules, different types of importing a module, exception handling techniques, file handling methods, reading images and networking or socket programming is illustrated.]]></pText>
+    </PageText>
+      
+  </PageData>
+</main>

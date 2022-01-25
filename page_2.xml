@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<main>
+  <PageData>
+	<MainHeading><![CDATA[Input-Output Statements]]></MainHeading>
+    <SubHeading><![CDATA[]]></SubHeading>
+    <PageText>
+      <pText><![CDATA[The function used to print output on a screen is the print statement where we can pass zero or more expressions separated by commas. The print function converts the expressions we pass into a string and writes the result to standard output.]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Example 1</b>]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[>>>print(”Learning Python is fun and enjoy it.”)
+This will produce the following output on the screen.
+Learning Python is fun and enjoy it.
+In Python, we need not declare the type of the variable as in C or C++. The type of the variable depends on the value assigned to it. Hence we can simply assign a value to a variable.
+]]></pText>
+     </PageText>
+      
+     <PageText>
+        <pText><![CDATA[<b>Example 2</b>]]></pText>
+    </PageText>
+    
+    <PageText>
+        <pText><![CDATA[>>>a=2
+>>>print(“The value of a is”,a)
+This will produce the following output on the screen. The value of a is 2
+The input([prompt]) function assumes the input is a valid Python expression and returns the evaluated result to us.
+]]></pText>
+    </PageText>
+      
+     <PageText>
+        <pText><![CDATA[<b>Example</b>]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[n = input(“Enter a number “) 
+print(“The number is: “, n)]]></pText>
+    </PageText>
+      
+      <PageText>
+        <pText><![CDATA[<b>Output</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+        <pText><![CDATA[Enter a number: 5 The number is: 5]]></pText>
+    </PageText>
+    
+      <PageText>
+      <pText><![CDATA[
+    <span class="PageVideoClass" id="C:\Users\USERS\Downloads\Tcs Rio Project\abc\video.mp4" headername="Video"></span></div>
+    ]]></pText>
+      </PageText>
+    
+    <PageText>
+      <pText><![CDATA[
+    <span class="PageAudioClass" id="Audio_BTNID" url="C:\Users\USERS\Downloads\Tcs Rio Project\abc\Audio"  headername="Audio"></span>
+
+    ]]></pText>
+      </PageText>
+      
+    <PageText>
+      <pText><![CDATA[
+    <a href="C:\Users\USERS\Downloads\Tcs Rio Project\abc\The Alchemist.pdf" class="SectionClass" target="_blank"></a>
+    ]]></pText>
+      </PageText>
+      
+  </PageData>
+</main>

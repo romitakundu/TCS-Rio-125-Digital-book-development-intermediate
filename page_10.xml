@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<main>
+  <PageData>
+      <MainHeading><![CDATA[<b>	7.10. Exception Handling</b>]]></MainHeading>
+    <SubHeading><![CDATA[]]></SubHeading>
+      
+    <PageText>
+      <pText><![CDATA[An exception is an abnormal condition that is caused by a runtime error in the program. It disturbs the normal flow of the program. An example for an exception is division by 0. When a Python script encounters a situation that it cannot deal with, it raises an exception. An exception is a Python object that represents an error.]]></pText>
+    </PageText>
+     
+    <PageText>
+      <pText><![CDATA[If the exception object is not caught and handled properly, the interpreter will display an error message. If we want the program to continue with the execution of the remaining code, then we should try to catch the exception object thrown by the error condition and then display appropriate messages for taking corrective actions. This task is known as exception handling.]]></pText>
+    </PageText>
+     
+    <PageText>
+      <pText><![CDATA[Python has a collection of built-in Exception classes. If the runtime error belongs to any of the pre-defined built-in exception, it will throw the object of the appropriate exception. Python uses a keyword try to prepare a block of code that is likely to cause an error and throw an exception. An except block is defined which catches the exception thrown by thetry block and handles it. The try block can have one or more statements that could generate an exception. If anyone statement generates an exception, then the remaining statements in the block are skipped and execution jumps to the except block that is placed next to the try block.
+]]></pText>
+    </PageText>
+    
+    <PageText>
+      <pText><![CDATA[The except block can have more than one statement and if the except parameter matches with the type of the Exception object, then the exception is caught and statements in the except block will be executed. Every try block should be followed by atleast one except statement.
+]]></pText>
+    </PageText>
+    
+     <PageText>
+      <pText><![CDATA[try….except]]></pText>
+    </PageText>
+     
+    <PageText>
+      <pText><![CDATA[The following gives the syntax of try….except statement]]></pText>
+    </PageText>
+    
+     <PageText>
+        <pText><![CDATA[<b>Syntax</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>try:</div>
+    <div>suite</div>
+    <div>except Exception1:</div>
+    <div>Exception1_suite#Executes when Exception1 occurs. </div>
+    <div>except Exception2:</div>
+    <div>Exception2_suite#Executes when Exception2 occurs.</div> 
+    <div>else:</div>
+    <div>else_suite #Executes if there is no exception in the try block.</div>
+    </div>
+]]></pText>
+    </PageText>
+    
+    <PageText>
+        <pText><![CDATA[When an exception occurs inside a try block, it will go to the corresponding except block. If no exception is raised inside a try block then after the try block, the statements in the else block is executed. The else block can also be considered a place to put the code that does not raise any exception.]]></pText>
+    </PageText>
+      
+      <PageText>
+        <pText><![CDATA[<b>Example Program</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>#Exception Handling</div>
+    <div>try:</div>
+    <div>a=int(input(“First Number:”))</div>
+    <div>b=int(input(“Second Number:”))</div>
+    <div>result=a/b</div>
+    <div>print(“Result=”,result)</div>
+    <div>except ZeroDivisionError:</div>
+    <div>print(“Division by Zero”)</div>
+    <div>else:</div>
+    <div>print(“Successful Division”)</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Output</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[
+        <div class = "TextBorderClass">
+        <div>First Number:10</div>
+        <div>Second Number:0</div>
+        <div>Division by Zero</div>
+        </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[In the above example, the second number is 0. Since division by zero is not possible, an exception is thrown and the execution goes to the except block. All the rest of the statements is bypassed in the try block. Hence the output is displayed as Division by Zero.]]></pText>
+    </PageText>
+      
+  </PageData>
+</main>

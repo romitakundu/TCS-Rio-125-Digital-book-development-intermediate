@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<main>
+  <PageData>
+	<MainHeading><![CDATA[Operators]]></MainHeading>
+    <SubHeading><![CDATA[]]></SubHeading>
+      
+    <PageText>
+      <pText><![CDATA[Python supports various operators in like arithmetic operators, comparison (relational) operators, assignment operators, logical operators, bitwise operators, membership operators and identity operators. Table 7.1 shows the arithmetic operators in Python.
+]]></pText>
+    </PageText>
+      
+     <PageText>
+      <pText><![CDATA[
+    <div class="TableHeadingClass">Table 7.1: Arithmetic Operators in Python</div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+      <pText><![CDATA[
+    <table style="width:80;margin:auto"border="1">
+    <tr>
+    <th>Operator</th>
+    <th>Operation</th>
+    <th>Description</th>
+    </tr>
+    <tr>
+    <td>+</td>
+    <td>Addition</td>
+    <td>Adds values on either side of the operator.</td>
+    </tr>
+    <tr>
+    <td>-</td>
+    <td>Subtraction</td>
+    <td>Subtracts right hand operand from left hand operand.</td>
+    </tr>
+    <tr>
+    <td>*</td>
+    <td>Multiplication</td>
+    <td>Multiplies values on either side of the operator.</td>
+    </tr>
+    <tr>
+    <td>/</td>
+    <td>Division</td>
+    <td>Divides left hand operand by right hand operand.</td>
+    </tr>
+    <tr>
+    <td>%</td>
+    <td>Modulus</td>
+    <td>Divides left hand operand by right hand operand and returns remainder.</td>
+    </tr>
+    <tr>
+    <td>**</td>
+    <td>Exponent</td>
+    <td>Performs exponential (power) calculation on operators.</td>
+    </tr>
+    <tr>
+    <td>//</td>
+    <td>Floor Division</td>
+    <td>The division of operands where the result is the quotient in which the digits after the decimal point are removed.</td>
+    </tr>
+    </table>
+]]></pText>
+    </PageText>
+    
+     <PageText>
+      <pText><![CDATA[Comparison operators compare the values on either sides of them and decide the relation among them. They are also called relational operators. Python supports the following relational operators. Table 7.2 shows the comparison or relational operators in Python.
+]]></pText>
+    </PageText>
+      
+      <PageText>
+      <pText><![CDATA[
+    <div class="TableHeadingClass">Table 7.2: Comparison Operators in Python</div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+      <pText><![CDATA[
+    <table style="width:80;margin:auto"border="1">
+    <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    </tr>
+    <tr>
+    <td>==</td>
+    <td>If the values of two operands are equal, then the condition becomes true.</td>
+    </tr>
+    <tr>
+    <td>!=</td>
+    <td>If values of two operands are not equal, then condition becomes true.</td>
+    </tr>
+    <tr>
+    <td>></td>
+    <td>If the value of left operand is greater than the value of right operand, then condition becomes true.</td>
+    </tr>
+    <tr>
+    <td><</td>
+    <td>If the value of left operand is less than the value of right operand, then condition becomes true.</td>
+    </tr>
+    <tr>
+    <td>>=</td>
+    <td>If the value of left operand is greater than or equal to the value of right operand, then condition becomes true.</td>
+    </tr>
+    <tr>
+    <td><=</td>
+    <td>If the value of left operand is less than or equal to the value of right operand, then condition becomes true.</td>
+    </tr>
+    </table>
+]]></pText>
+    </PageText>  
+      
+      <PageText>
+      <pText><![CDATA[Python provides various assignment operators. Various shorthand operators for addition, subtraction, multiplication, division, modulus, exponent and floor division are also supported by Python. Table 7.3 provides the various assignment operators.
+]]></pText>
+    </PageText>
+
+      <PageText>
+      <pText><![CDATA[
+    <div class="TableHeadingClass">Table 7.3: Assignment Operators in Python</div>
+]]></pText>
+    </PageText>
+      
+      <PageText>
+      <pText><![CDATA[
+    <table style="width:80;margin:auto"border="1">
+    <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    </tr>
+    <tr>
+    <td>=</td>
+    <td>Assigns values from right side operands to left side operand.</td>
+    </tr>
+    <tr>
+    <td>+=</td>
+    <td>It adds right operand to the left operand and assign the result to left operand.</td>
+    </tr>
+    <tr>
+    <td>-=</td>
+    <td>It subtracts right operand from the left operand and assign the result to left operand.</td>
+    </tr>
+    <tr>
+    <td>*=</td>
+    <td>It multiplies right operand with the left operand and assign the result to left operand.</td>
+    </tr>
+    <tr>
+    <td>/=</td>
+    <td>It divides left operand with the right operand and assign the result to left operand.</td>
+    </tr>
+    <tr>
+    <td>%=</td>
+    <td>It takes modulus using two operands and assign the result to left operand.</td>
+    </tr>
+    <tr>
+    <td>**=</td>
+    <td>Performs exponential (power) calculation on operators and assign value to the left operand.</td>
+    </tr>
+    <tr>
+    <td>//=</td>
+    <td>It performs floor division on operators and assign value to the left operand.</td>
+    </tr>
+    </table>
+]]></pText>
+    </PageText>
+      
+   <PageText>
+      <pText><![CDATA[Bitwise operator works on bits and performs bit by bit operation. The following are the bitwise operators supported by Python. Table 7.4 gives a description of bitwise operators in Python.
+]]></pText>
+    </PageText>
+      
+    <PageText>
+      <pText><![CDATA[
+    <div class="TableHeadingClass">Table 7.4: Bitwise Operators in Python</div>
+]]></pText>
+    </PageText>
+      
+     <PageText>
+      <pText><![CDATA[
+    <table style="width:80;margin:auto"border="1">
+    <tr>
+    <th>Operator</th>
+    <th>Operation</th>
+    <th>Description</th>
+    </tr>
+    <tr>
+    <td>&</td>
+    <td>Binary AND</td>
+    <td>Operator copies a bit to the result if it exists in both operands.</td>
+    </tr>
+    <tr>
+    <td>|</td>
+    <td>Binary OR</td>
+    <td>It copies a bit if it exists in either operand.</td>
+    </tr>
+    <tr>
+    <td>~</td>
+    <td>Binary Ones Complement</td>
+    <td>It is unary and has the effect of ‘flipping’ bits.</td>
+    </tr>
+    <tr>
+    <td><<</td>
+    <td>Binary Left Shift</td>
+    <td>The left operands value is moved left by the number of
+bits specified by the right operand.
+</td>
+    </tr>
+    <tr>
+    <td>>></td>
+    <td>Binary Right Shift</td>
+    <td>The left operands value is moved right by the number
+of bits specified by the right operand.
+</td>
+    </tr>
+    </table>
+]]></pText>
+    </PageText>
+      
+     <PageText>
+      <pText><![CDATA[Table 7.5 shows the various logical operators supported by Python language
+]]></pText>
+    </PageText>
+      
+    <PageText>
+      <pText><![CDATA[
+    <div class="TableHeadingClass">Table 7.5: Logical Operators in Python</div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+      <pText><![CDATA[
+    <table style="width:80;margin:auto"border="1">
+    <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    </tr>
+    <tr>
+    <td>and</td>
+    <td>Logical AND</td>
+    <td>If both the operands are true then condition becomes true.</td>
+    </tr>
+    <tr>
+    <td>or</td>
+    <td>Logical OR</td>
+    <td>If any of the operands are true then condition becomes true.</td>
+    </tr>
+    <tr>
+    <td>not</td>
+    <td>Logical NOT</td>
+    <td>Used to reverse the logical state of its operand.</td>
+    </tr>
+    </table>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+      <pText><![CDATA[Python’s membership operators test for membership in a sequence, such as strings, lists, or tuples. There are two membership operators as explained below in Table 7.6. Strings, lists and tuples will be covered in the next section.
+]]></pText>
+    </PageText>
+     
+     <PageText>
+      <pText><![CDATA[
+    <div class="TableHeadingClass">Table 7.6: Membership Operators in Python</div>
+]]></pText>
+    </PageText>
+     
+    <PageText>
+      <pText><![CDATA[
+    <table style="width:80;margin:auto"border="1">
+    <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    </tr>
+    <tr>
+    <td>in</td>
+    <td>Evaluates to true if the variables on either side of the operator point to the same object and false otherwise.</td>
+    <tr>
+    <td>not in</td>
+    <td>Evaluates to true if it does not finds a variable in the specified sequence and
+false otherwise.
+</td>
+    </tr>
+    </table>
+]]></pText>
+    </PageText>
+      
+     <PageText>
+      <pText><![CDATA[Identity operators compare whether two elements points to the same memory locations.
+There are two Identity operators as shown in below Table 7.7.
+]]></pText>
+    </PageText>
+      
+    <PageText>
+      <pText><![CDATA[
+    <div class="TableHeadingClass">Table 7.7: Identity Operators in Python</div>
+]]></pText>
+    </PageText>
+      
+     <PageText>
+      <pText><![CDATA[
+    <table style="width:80;margin:auto"border="1">
+    <tr>
+    <th>Operator</th>
+    <th>Description</th>
+    </tr>
+    <tr>
+    <td>is</td>
+    <td>Evaluates to true if the variables on either side of the operator point to the same object and false otherwise.</td>
+    <tr>
+    <td>is not</td>
+    <td>Evaluates to false if the variables on either side of the operator point to the same object and true otherwise.
+</td>
+    </tr>
+    </table>
+]]></pText>
+    </PageText>
+   
+    <PageText>
+      <pText><![CDATA[
+    <span class="PageVideoClass" id="Video_BTNID" url="C:\Users\USERS\Downloads\Tcs Rio Project\abc\video.mp4" headername="Video"></span></div>
+    ]]></pText>
+      </PageText>
+    
+    <PageText>
+      <pText><![CDATA[
+    <span class="PageAudioClass" id="Audio_BTNID" url="C:\Users\USERS\Downloads\Tcs Rio Project\abc\Audio"  headername="Audio"></span>
+
+    ]]></pText>
+      </PageText>
+      
+    <PageText>
+      <pText><![CDATA[
+    <a href="C:\Users\USERS\Downloads\Tcs Rio Project\abc\The Alchemist.pdf" class="SectionClass" target="_blank"></a>
+    ]]></pText>
+      </PageText>
+      
+  </PageData>
+</main>

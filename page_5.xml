@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<main>
+  <PageData>
+      <MainHeading><![CDATA[<b>Decision Making</b>]]></MainHeading>
+    <SubHeading><![CDATA[]]></SubHeading>
+      
+    <PageText>
+      <pText><![CDATA[Decision making is required when we want to execute a code only if a certain condition is satisfied. The if…elif…else statement is used in Python for decision making.]]></pText>
+    </PageText>
+     
+      <PageText>
+          <pText><![CDATA[<b>if statement</b>]]></pText>
+    </PageText>
+      
+    <PageText>
+          <pText><![CDATA[<b>Syntax</b>]]></pText>
+    </PageText>
+     
+     <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>if test expression: </div>
+    <div>statement(s)</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+          <pText><![CDATA[Here, the program evaluates the test expression and will execute statement(s) only if the text expression is True. If the text expression is False, the statement(s) is not executed. In Python, the body of the if statement is indicated by the indentation. Body starts with an indentation and ends with the first unindented line. Python interprets non-zero values as True. None and 0 are interpreted as False]]></pText>
+    </PageText>
+      
+     <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>num =int(input(“Enter a number: “)) </div>
+    <div>if num == 0:</div>
+    <div>print(“Zero”)</div>
+    <div>print(“This is always printed”)</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Output</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[
+        <div class = "TextBorderClass">
+        <div>Enter a number: 0</div>
+        <div>Zero</div>
+        <div>This is always printed</div>
+        <div><b>if….else statement</b></div>
+        </div>
+]]></pText>
+    </PageText> 
+      
+      <PageText>
+        <pText><![CDATA[<b>Syntax</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>if test expression:</div>
+    <div>Body of if </div>
+    <div>else:</div>
+    <div>Body of else</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+      <PageText>
+        <pText><![CDATA[<b>Example Program</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>num =int(input(“Enter a number: “)) </div>
+    <div>if num >= 0:</div>
+    <div>print(“Positive Number or Zero”) </div>
+    <div>else:</div>
+    <div>print(“Negative Number”)</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Output</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[
+        <div class = "TextBorderClass">
+        <div>Enter a number: 5 </div>
+        <div>Positive Number or Zero</div>
+        <div><b>if...elif...else statement</b></div>
+        </div>
+]]></pText>
+    </PageText> 
+      
+      <PageText>
+        <pText><![CDATA[<b>Syntax</b>]]></pText>
+    </PageText>
+      
+      <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>if test expression:</div>
+    <div>Body of if</div>
+    <div>elif test expression:</div>
+    <div>Body of elif </div>
+    <div>else:</div>
+    <div>Body of else</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[The elif is short for else if. It allows us to check for multiple expressions. If the condition for if is False, it checks the condition of the next elif block and so on. If all the conditions are False, body of else is executed. Only one block among the several if...elif...else blocks is executed according to the condition.]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Example Program</b>]]></pText>
+    </PageText>
+      
+    <PageText>
+          <pText><![CDATA[
+    <div class = "CodeBox">
+    <div>num =int(input(“Enter a number: “))</div>
+    <div>if num > 0:</div>
+    <div>print(“Positive number”)</div>
+    <div>elif num == 0:</div>
+    <div>print(“Zero”)</div>
+    <div>else:</div>
+    <div>print(“Negative number”)</div>
+    </div>
+]]></pText>
+    </PageText>
+      
+    <PageText>
+        <pText><![CDATA[<b>Output</b>]]></pText>
+    </PageText>
+     
+    <PageText>
+        <pText><![CDATA[
+        <div class = "TextBorderClass">
+        <div>Enter a number: 5 </div>
+        <div>Positive Number</div>
+        </div>
+]]></pText>
+    </PageText> 
+      
+  </PageData>
+</main>
